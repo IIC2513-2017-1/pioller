@@ -1,24 +1,5 @@
-# README
+# Pioller
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+RoR application used teach web development on IIC2513-2017-1.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![CircleCI](https://circleci.com/gh/IIC2513-2017-1/pioller/tree/master.svg?style=svg)](https://circleci.com/gh/IIC2513-2017-1/pioller/tree/master)

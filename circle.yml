@@ -1,0 +1,12 @@
+dependencies:
+  override:
+    - gem install bundler --version '1.13.7' -N
+    - bundle _1.13.7_ install --without development:production --path=vendor/bundle --jobs=4 --retry=3
+test:
+  override:
+    - bundle exec rake reek
+    - bundle exec rake rubocop
+    - bundle exec rake rbp
+    - bundle exec rake brakeman
+  post:
+    - mv rails_best_practices_output.html $CIRCLE_ARTIFACTS/rails_best_practices_output.html
