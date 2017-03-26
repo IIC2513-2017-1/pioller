@@ -1,0 +1,42 @@
+AllCops:
+  TargetRubyVersion: 2.4
+  DisplayStyleGuide: true
+  Include:
+    - '**/*.jbuilder'
+    - '**/*.rake'
+    - '**/Gemfile'
+    - '**/Rakefile'
+  Exclude:
+    - 'db/migrate/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'vendor/**/*'
+    - 'bin/**/*'
+
+Rails:
+  Enabled: true
+
+Stryle/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'test/test_helper.rb'
+
+Metrics/ClassLength:
+  Max: 150
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/LineLength:
+  Max: 80
+
+Metrics/CyclomaticComplexity:
+  Max: 11
+
+Metrics/ModuleLength:
+  Max: 150
