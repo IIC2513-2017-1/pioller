@@ -34,8 +34,24 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Brakeman detects security vulnerabilities in Ruby on Rails
+  # applications via static analysis.
+  gem 'brakeman', '~> 3.5.0', require: false
+  # Call 'byebug' anywhere in the code to stop execution and get a
+  # debugger console
   gem 'byebug', platform: :mri
+  # Flay analyzes code for structural similarities. Differences in literal
+  # values, variable, class, method names, whitespace, programming style,
+  # braces vs do/end, etc are all ignored.
+  gem 'flay', '~> 2.8.1', require: false
+  # A code metric tool for rails codes, written in Ruby.
+  gem 'rails_best_practices', '~> 1.18.0', require: false
+  # Reek is a tool that examines Ruby classes, modules and
+  # methods and reports any code smells it finds.
+  gem 'reek', '~> 4.5.6', require: false
+  # Automatic Ruby code style checking tool. Aims to enforce
+  # the community-driven Ruby Style Guide.
+  gem 'rubocop', '~> 0.47.1', require: false
 end
 
 group :development do
