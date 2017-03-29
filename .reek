@@ -22,6 +22,9 @@ NilCheck:
     enabled: false
   TooManyInstanceVariables:
     enabled: false
+"test/":
+  IrresponsibleModule:
+    enabled: false
 "app/helpers":
   IrresponsibleModule:
     enabled: false
