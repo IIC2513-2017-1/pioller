@@ -22,6 +22,8 @@ NilCheck:
     enabled: false
   TooManyInstanceVariables:
     enabled: false
+  DuplicateMethodCall:
+    enabled: false
 "test/":
   IrresponsibleModule:
     enabled: false
