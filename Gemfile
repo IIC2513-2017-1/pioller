@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -49,10 +50,10 @@ group :development, :test do
   gem 'rails_best_practices', '~> 1.18.0', require: false
   # Reek is a tool that examines Ruby classes, modules and
   # methods and reports any code smells it finds.
-  gem 'reek', '~> 4.5.6', require: false
+  gem 'reek', '~> 4.6.1', require: false
   # Automatic Ruby code style checking tool. Aims to enforce
   # the community-driven Ruby Style Guide.
-  gem 'rubocop', '~> 0.47.1', require: false
+  gem 'rubocop', '~> 0.48.1', require: false
 end
 
 group :development do
@@ -67,6 +68,6 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 ruby '2.4.0'

@@ -18,5 +18,5 @@ if ENV['RAILS_ENV'] == 'development' || ENV['RAILS_ENV'] == 'test'
   task 'rbp' do
     sh 'rails_best_practices . -f html'
   end
-  task linters: [:reek, :rubocop, :rbp, :brakeman, :flay]
+  task linters: %i[reek rubocop rbp brakeman flay]
 end
