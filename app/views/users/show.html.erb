@@ -20,5 +20,10 @@
   <%= @user.password %>
 </p>
 
+<p>
+  <strong>Comments count:</strong>
+  <%= @user.comments.size %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
