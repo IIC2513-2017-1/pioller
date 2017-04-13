@@ -4,4 +4,6 @@
 # Model for tweets
 class Tweet < ApplicationRecord
   validates :content, presence: true, allow_blank: false
+
+  has_many :comments
 end
