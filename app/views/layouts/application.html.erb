@@ -9,6 +9,35 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div id="logo">
+        <%= link_to root_path do %>
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/300px-Twitter_bird_logo_2012.svg.png"/>
+        <% end %>
+      </div>
+
+      <nav id="main-menu">
+        <%= link_to 'Users', users_path %>
+        <%= link_to 'Tweets', tweets_path %>
+      </nav>
+
+      <div id="user-bar">
+        <div>Nombre del usuario</div>
+        <div>Usuario</div>
+        <%= link_to 'Salir' %>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <hr>
+      <div id="project">© Pioller 2017</div>
+      <div id="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          <img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
