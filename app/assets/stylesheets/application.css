@@ -17,3 +17,9 @@
  .timestamp {
    color: #8c8c8c;
  }
+
+ .new-button, .edit-button {
+   border-color: #818488;
+   color: #818488;
+   margin-left: 10px;
+ }

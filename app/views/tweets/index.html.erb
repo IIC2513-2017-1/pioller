@@ -1,31 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Tweets</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>Private</th>
-      <th>User email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="tweets tweet-stream">
+  <h1>Tweets: <%= @tweets.size %></h1>
+  <ol>
     <% @tweets.each do |tweet| %>
-      <tr>
-        <td><%= tweet.content %></td>
-        <td><%= tweet.private %></td>
-        <td><%= tweet.user.email %></td>
-        <td><%= link_to 'Show', tweet %></td>
-        <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-        <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <%= render 'tweets/preview', tweet: tweet %>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Tweet', new_tweet_path %>
+  </ol>
+  <%= link_to 'New Tweet', new_tweet_path, class: 'new-button' %>
+</div>
