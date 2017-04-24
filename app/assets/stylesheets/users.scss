@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.profile-info, .tweet-stream, .user-followers, .user-following {
+.profile-info, .tweet-stream, .user-followers, .user-following, .users {
   border: solid 1px #14171a;
   border-radius: 15px;
   margin: 10px 0 0 0;
@@ -18,12 +18,16 @@
   width: 100%;
 }
 
-.tweet-stream, .user-followers, .user-following {
+.users, .tweet-stream, .user-followers, .user-following {
   width: 32%;
   height: 420px;
   background-color: white;
   text-align: left;
   padding-left: 10px;
+}
+
+.users {
+  width: 99%;
 }
 
 .tweet-stream {
@@ -46,7 +50,7 @@
   padding-left: 10px;
 }
 
-.user-followers, .user-following {
+.users, .user-followers, .user-following {
   ol {
     padding-left: 10px;
     list-style: none;
