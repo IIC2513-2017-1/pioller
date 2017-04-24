@@ -1,34 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div class="profile-info">
+  <h1 class="profile-user-name"><%= @user.full_name %></h1>
+  <%= link_to 'Edit', edit_user_path(@user), class: 'edit-button' %>
+  <h2 class="profile-user-email"><%= @user.email %></h2>
+</div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<div class="user-activity">
+  <div class="tweet-stream">
+    <h2>Tweets: <%= @user.tweets.size %></h2>
+    <ol>
+      <% @user.tweets.each do |tweet| %>
+        <%= render 'tweets/preview', tweet: tweet %>
+      <% end %>
+    </ol>
+  </div>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+  <div class="user-followers">
+    <h2>Followers: <%= @user.followers.size %></h2>
+    <ol>
+      <% @user.followers.each do |user| %>
+        <%= render 'preview', user: user %>
+      <% end %>
+    </ol>
+  </div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
-
-<p>
-  <strong>Comments count:</strong>
-  <%= @user.comments.size %>
-</p>
-
-<p>
-  <strong>Tweets count:</strong>
-  <%= @user.tweets.size %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <div class="user-following">
+    <h2>Following: <%= @user.following.size %></h2>
+    <ol>
+      <% @user.following.each do |user| %>
+        <%= render 'preview', user: user %>
+      <% end %>
+    </ol>
+  </div>
+</div>

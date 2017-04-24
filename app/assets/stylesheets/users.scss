@@ -1,3 +1,71 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-activity {
+  text-align: center;
+}
+
+.profile-info, .tweet-stream, .user-followers, .user-following {
+  border: solid 1px #14171a;
+  border-radius: 15px;
+  margin: 10px 0 0 0;
+  background: white;
+  display: inline-block;
+}
+
+.profile-info {
+  width: 100%;
+}
+
+.tweet-stream, .user-followers, .user-following {
+  width: 32%;
+  background-color: white;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.tweet-stream {
+  float: left;
+}
+
+.user-following {
+  float: right;
+}
+
+.profile-user-name {
+  display: inline;
+  padding-left: 10px;
+}
+
+.profile-user-email {
+  margin-top: 0;
+  color: #657786;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.edit-button {
+  border-color: #818488;
+  color: #818488;
+  margin-left: 10px;
+}
+
+.user-followers, .user-following {
+  ol {
+    padding-left: 10px;
+    list-style: none;
+    height: 300px;
+    overflow: scroll;
+    width: 90%;
+  }
+
+  .user-stream-item {
+    padding: 10px 0;
+    background-color: white;
+  }
+
+  .user-stream-item:not(:first-child) {
+    border-top: 1px solid #e8e8e8;
+  }
+}

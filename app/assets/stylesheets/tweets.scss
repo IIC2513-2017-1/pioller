@@ -1,3 +1,26 @@
 // Place all the styles related to the Tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.content {
+  display: block;
+}
+
+.tweet-stream {
+  ol {
+    padding-left: 10px;
+    list-style: none;
+    height: 300px;
+    overflow: scroll;
+    width: 90%;
+  }
+
+  .tweet-stream-item {
+    padding: 10px 0;
+    background-color: white;
+  }
+
+  .tweet-stream-item:not(:first-child) {
+    border-top: 1px solid #e8e8e8;
+  }
+}

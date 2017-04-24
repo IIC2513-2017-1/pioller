@@ -16,4 +16,8 @@ class User < ApplicationRecord
 
   has_many :followers, through: :follower_relationships, source: :follower
   has_many :following, through: :following_relationships, source: :following
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end
