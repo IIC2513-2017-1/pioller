@@ -22,12 +22,20 @@
       </nav>
 
       <div id="user-bar">
-        <div>Nombre del usuario</div>
-        <div>Usuario</div>
-        <%= link_to 'Salir' %>
+        <% if current_user %>
+          <div class="name">Welcome, <%= current_user.first_name %></div>
+          <%= link_to 'Logout', session_path, method: :delete %>
+        <% else %>
+          <%= link_to 'Login', new_session_path %>
+        <% end %>
       </div>
     </header>
     <main>
+      <% [:alert, :notice].each do |flash_type| %>
+        <% if (flash_message = flash[flash_type]).present? %>
+          <div class="<%= flash_type %>"><%= flash_message %></div>
+        <% end %>
+      <% end %>
       <%= yield %>
     </main>
     <footer>
