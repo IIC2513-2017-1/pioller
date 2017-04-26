@@ -60,6 +60,8 @@ GEM
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     ffi (1.9.18)
     flay (2.8.1)
       erubis (~> 2.7.0)
@@ -205,6 +207,7 @@ PLATFORMS
 DEPENDENCIES
   brakeman (~> 3.5.0)
   byebug
+  faker (~> 1.7.3)
   flay (~> 2.8.1)
   jbuilder (~> 2.5)
   jquery-rails

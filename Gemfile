@@ -57,6 +57,9 @@ group :development, :test do
 end
 
 group :development do
+  # Faker, a port of Data::Faker from Perl, is used to easily generate
+  # fake data: names, addresses, phone numbers, etc.
+  gem 'faker', '~> 1.7.3'
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring
