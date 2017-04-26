@@ -5,7 +5,7 @@
 class Tweet < ApplicationRecord
   validates :content, presence: true, allow_blank: false
 
-  has_many :comments
-  has_many :attachments
+  has_many :comments, dependent: :destroy
+  has_many :attachments, dependent: :destroy
   belongs_to :user
 end
