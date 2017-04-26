@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
+  include Secured
+
   before_action :set_comment, only: %i[show edit update destroy]
+  before_action :logged_in?
 
   # GET /comments
   # GET /comments.json

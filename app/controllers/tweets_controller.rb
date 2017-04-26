@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 class TweetsController < ApplicationController
+  include Secured
+
   before_action :set_tweet, only: %i[show edit update destroy]
+  before_action :logged_in?, only: %i[new create edit update destroy]
 
   # GET /tweets
   # GET /tweets.json
