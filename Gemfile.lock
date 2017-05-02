@@ -44,6 +44,7 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
+    bcrypt (3.1.11)
     brakeman (3.5.0)
     builder (3.2.3)
     byebug (9.0.6)
@@ -205,6 +206,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   brakeman (~> 3.5.0)
   byebug
   faker (~> 1.7.3)
