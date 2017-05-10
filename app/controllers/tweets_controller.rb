@@ -9,8 +9,11 @@ class TweetsController < ApplicationController
   # GET /tweets
   # GET /tweets.json
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.includes(:user)
+                   .restricted_for(current_user)
+                   .followed_by(current_user)
   end
+
 
   # GET /tweets/1
   # GET /tweets/1.json
