@@ -12,4 +12,5 @@
   <span class="timestamp">
     Joined <%= time_ago_in_words(user.created_at) %> ago
   </span>
+  <%= following_button(user)%>
 </li>
