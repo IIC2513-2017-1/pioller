@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :followers, only: [:destroy]
 
   resource :session, only: [:new, :create, :destroy]
-  root 'home#index'
+  root 'tweets#index'
 end
