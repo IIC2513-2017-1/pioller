@@ -4,8 +4,14 @@
   <h2 class="profile-user-email"><%= @user.email %></h2>
 </div>
 
+<div class="tab">
+  <button class="tablinks defaultOpen" data-tab="tweet-stream">Tweets</button>
+  <button class="tablinks" data-tab="user-followers">Followers</button>
+  <button class="tablinks" data-tab="user-following">Following</button>
+</div>
+
 <div class="user-activity">
-  <div class="tweet-stream">
+  <div class="tweet-stream tabcontent">
     <h2>Tweets: <%= @user.tweets.size %></h2>
     <ol>
       <% @user.tweets.each do |tweet| %>
@@ -14,7 +20,7 @@
     </ol>
   </div>
 
-  <div class="user-followers">
+  <div class="user-followers tabcontent">
     <h2>Followers: <%= @user.followers.size %></h2>
     <ol>
       <% @user.followers.each do |user| %>
@@ -23,7 +29,7 @@
     </ol>
   </div>
 
-  <div class="user-following">
+  <div class="user-following tabcontent">
     <h2>Following: <%= @user.following.size %></h2>
     <ol>
       <% @user.following.each do |user| %>
