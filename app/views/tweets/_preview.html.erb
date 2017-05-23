@@ -1,4 +1,4 @@
-<li class="tweet-stream-item">
+<li class="tweet-stream-item" data-tweet-id="<%= tweet.id %>">
   <div class="author-info">
     <span class="tweet-author-name">
       <strong>
@@ -14,6 +14,6 @@
     <%= tweet.content %>
   </span>
   <% if current_user == tweet.user %>
-    <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %>
   <% end %>
 </li>

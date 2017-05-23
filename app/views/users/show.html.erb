@@ -12,7 +12,7 @@
 
 <div class="user-activity">
   <div class="tweet-stream tabcontent">
-    <h2>Tweets: <%= @user.tweets.size %></h2>
+    <h2>Tweets: <span class="tweets-count"><%= @user.tweets.size %></span></h2>
     <ol>
       <% @user.tweets.each do |tweet| %>
         <%= render 'tweets/preview', tweet: tweet %>

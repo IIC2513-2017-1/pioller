@@ -1,0 +1,4 @@
+var tweet = $('[data-tweet-id="<%= @tweet.id %>"]');
+var count = $('.tweets-count');
+tweet.remove();
+count.text(+count.text() - 1);

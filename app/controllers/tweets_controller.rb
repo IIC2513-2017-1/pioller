@@ -74,6 +74,7 @@ class TweetsController < ApplicationController
         redirect_to current_user, notice: 'Tweet was successfully destroyed.'
       end
       format.json { head :no_content }
+      format.js
     end
   end
 
