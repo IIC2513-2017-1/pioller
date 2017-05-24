@@ -10,9 +10,9 @@ module UsersHelper
       relation.follower_id == current_user.id
     end
     if following_relation
-      link_to 'Unfollow', follower_path(following_relation), method: 'delete'
+      link_to 'Unfollow', follower_path(following_relation), method: 'delete', remote: true, data: { type: 'json', 'user-id': user.id }
     else
-      link_to 'Follow', user_followers_path(user), method: 'post'
+      link_to 'Follow', user_followers_path(user), method: 'post', remote: true, data: { type: 'json', 'user-id': user.id }
     end
   end
 end

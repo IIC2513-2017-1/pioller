@@ -10,7 +10,19 @@ class FollowersController < ApplicationController
     )
     if follower_relationship.save
       FollowerMailer.new_follower_email(user, current_user).deliver_later
-      redirect_to users_path
+      respond_to do |format|
+        format.html { redirect_to users_path }
+        format.json do
+          render json: {
+            following: {
+              id: user.id
+            },
+            follow: {
+              id: follower_relationship.id
+            }
+          }
+        end
+      end
     else
       redirect_to users_path, alert: "Can't follow that user"
     end
@@ -19,6 +31,15 @@ class FollowersController < ApplicationController
   def destroy
     follow = Follow.find(params[:id])
     follow.destroy
-    redirect_to users_path, notice: "You are not following #{follow.following.email} anymore"
+    respond_to do |format|
+      format.html { redirect_to users_path, notice: "You are not following #{follow.following.email} anymore" }
+      format.json do
+        render json: {
+          unfollowing: {
+            id: follow.following.id
+          }
+        }
+      end
+    end
   end
 end
