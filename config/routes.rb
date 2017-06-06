@@ -9,4 +9,10 @@ Rails.application.routes.draw do
 
   resource :session, only: [:new, :create, :destroy]
   root 'tweets#index'
+
+  namespace :api do
+    namespace :v1 do
+      resources :tweets, only: [:index, :create]
+    end
+  end
 end
