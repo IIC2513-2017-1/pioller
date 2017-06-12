@@ -30,7 +30,7 @@ u = User.create(
   email: ENV['EMAIL'],
   password: '123456'
 )
-
+u.generate_token_and_save
 u.following << User.all.limit(3)
 u.followers << User.all.limit(4)
 

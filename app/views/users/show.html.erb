@@ -1,6 +1,7 @@
 <div class="profile-info">
   <h1 class="profile-user-name"><%= @user.full_name %></h1>
   <%= link_to 'Edit', edit_user_path(@user), class: 'edit-button' if @user == current_user %>
+  <%= @user.token if @user == current_user %>
   <h2 class="profile-user-email"><%= @user.email %></h2>
 </div>
 
