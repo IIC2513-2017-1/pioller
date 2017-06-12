@@ -6,9 +6,12 @@ module Api::V1
 
     def create
       @tweet = Tweet.new(tweet_params)
-      unless @tweet.save
-        render json: { errors: @tweet.errors }, status: :unprocessable_entity
-      end
+      return if @tweet.save
+      render json: { errors: @tweet.errors }, status: :unprocessable_entity
+    end
+
+    def show
+      @tweet = Tweet.find(params[:id])
     end
 
     private
